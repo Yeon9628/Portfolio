@@ -46,7 +46,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color-dark-grey);
 }
 
 ul {
@@ -65,28 +65,28 @@ button {
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
-  color: var(--color-black);
+  color: var(--color-dark-grey);
   margin: 16px 0px;
 }
 
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-  color: var(--color-black);
+  color: var(--color-dark-grey);
   margin: 8px 0px;
 }
 
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-black);
+  color: var(--color-dark-grey);
   margin: 8px 0px;
 }
 
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-black);
+  color: var(--color-dark-grey);
   margin: 4px 0px;
 }
 
@@ -96,7 +96,7 @@ p {
   justify-content: space-between;
   background-color: var(--color-white);
   align-items: center;
-  color: var(--color-black);
+  color: var(--color-dark-grey);
   padding: 16px;
 }
 
@@ -122,7 +122,7 @@ p {
 }
 
 .navbar__menu__item.active {
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-dark-grey);
 }
 
 .navbar__menu__item:hover {
@@ -145,7 +145,7 @@ p {
 
 .home__title,
 .home__description {
-  color: var(--color-light-grey);
+  color: var(--color-dark-grey);
 }
 
 .home__contact {
@@ -350,4 +350,34 @@ p {
   margin-left: -12px;
   margin-top: 8px;
   background-color: var(--color-dark-white);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-yellow);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights,
+.contact__links i {
+  color: var(--color-light-grey);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i {
+  transform: all var(--animation-duration) ease-in;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-dark-grey);
 }
