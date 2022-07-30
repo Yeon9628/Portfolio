@@ -159,7 +159,7 @@ p {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid var(--color-light-white);
+  border: 2px solid var(--color-dark-white);
 }
 
 .home__title,
