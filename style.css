@@ -101,6 +101,7 @@ p {
   color: var(--color-dark-grey);
   padding: 16px;
   transition: var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
@@ -108,7 +109,7 @@ p {
   padding: 6px;
 }
 
-.navbar__manu {
+.navbar__menu {
   display: flex;
 }
 
@@ -412,7 +413,7 @@ p {
     align-items: flex-start;
   }
 
-  .navbar__manu {
+  .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
