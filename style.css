@@ -66,7 +66,7 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-dark-grey);
-  margin: 16px 0px;
+  margin: 25px 0px;
 }
 
 h2 {
@@ -173,6 +173,10 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-light-grey);
   border-radius: var(--size-border-redius);
+}
+
+.home__contact:hover {
+  background-color: var(--color-light-white);
 }
 
 /* Section common */
@@ -284,6 +288,7 @@ p {
   border-radius: var(--size-border-redius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -295,8 +300,9 @@ p {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: 6.3px;
 }
+
 .category__count {
   background-color: var(--color-grey);
   border-radius: 50%;
@@ -305,9 +311,9 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -432,8 +438,19 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    right: 16px;
+    font-size: var(--font-medium);
   }
 
   #navbar {
@@ -457,17 +474,34 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 50px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
     flex-direction: column;
   }
+
+.category__btn {
+  margin: 4px 0;
+}
+
+.category__btn.selected .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 4px;
+}
 
   .project{
     flex-grow: 1;
