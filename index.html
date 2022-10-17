@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
   <link rel="stylesheet" href="style.css" />
   <script src="main.js" defer></script>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav id="navbar">
@@ -37,8 +39,8 @@
   <section id="home">
     <div class="home__container">
       <img src="imags/soyeon.jpg" alt="Soyeon's profile photo" class="home__avatar" />
-      <h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
-      <h2 class="home__description">A Software Engineer currently resising in Sydney, Australia.</h2>
+      <h1 class="home__title">안녕하세요, <br />저는 박소연입니다.</h1>
+      <h2 class="home__description">현재 인천에 거주중인 신입 개발자입니다 :D</h2>
       <button class="home__contact">Contact Me</button>
     </div>
   </section>
@@ -46,7 +48,7 @@
   <!-- About -->
   <section id="about" class="section section__container">
     <h1>About Me</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dicta sed labore, provident repudiandae veniam similique, molestias voluptas placeat id dolorum, praesentium odio facilis veritatis obcaecati possimus velit quaerat aliquam.</p>
+    <p>프론트엔트 개발자를 꿈꾸며 독학으로 열심히 배워나가고 있는 새싹 개발자 입니다.</p>
     <div class="about__majors">
       <div class="major">
         <div class="major__icon">
@@ -74,14 +76,14 @@
     <div class="section__container">
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
-      <p>Experience with all phases of the software life-cycle. Passion for learning new technologies. Capable of working tithin a team environment and independently. Abillity to plan and time schedule, work under strict time pressure and adapt quickly whenneeded.</p>
+      <p>독학으로 공부한 만큼 부족한 점이 많지만 습득력이 빠른것과 업무 할 때의 높은 집중력이 장점입니다.</p>
       <div class="skillset">
         <div class="skillset__left">
           <h3 class="skillset__title">Skills</h3>
           <div class="skill">
             <div class="skill__description">
               <span>HTML</span>
-              <span>88%</span>
+              <!-- <span>88%</span> -->
             </div>
             <div class="skill__bar">
               <div class="skill__value" style="width: 88%;"></div>
@@ -90,7 +92,7 @@
           <div class="skill">
             <div class="skill__description">
               <span>CSS</span>
-              <span>85%</span>
+              <!-- <span>85%</span> -->
             </div>
             <div class="skill__bar">
               <div class="skill__value" style="width: 85%;"></div>
@@ -99,16 +101,7 @@
           <div class="skill">
             <div class="skill__description">
               <span>JAVASCRIPT</span>
-              <span>74%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 74%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>TYPESCRIPT</span>
-              <span>75%</span>
+              <!-- <span>75%</span> -->
             </div>
             <div class="skill__bar">
               <div class="skill__value" style="width: 75%;"></div>
@@ -116,8 +109,17 @@
           </div>
           <div class="skill">
             <div class="skill__description">
+              <span>TYPESCRIPT</span>
+              <!-- <span>87%</span> -->
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 87%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
               <span>REACT</span>
-              <span>67%</span>
+              <!-- <span>67%</span> -->
             </div>
             <div class="skill__bar">
               <div class="skill__value" style="width: 67%;"></div>
@@ -136,6 +138,8 @@
             <h3 class="skillset__title">Etc</h3>
             <ul class="etc__list">
               <li><span>Git</span></li>
+              <li><span>Git Hub</span></li>
+              <li><span>Notion</span></li>
               <li><span>Math</span></li>
             </ul>
           </div>
@@ -150,66 +154,59 @@
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
-        <button class="category__btn selected" data-filter="*">All <span class="category__count">8</span></button>
+        <button class="category__btn selected" data-filter="*">All <span class="category__count">7</span></button>
         <button class="category__btn" data-filter="front-end">Front-end <span class="category__count">4</span></button>
         <button class="category__btn" data-filter="react">React <span class="category__count">2</span></button>
-        <button class="category__btn" data-filter="mobile">Mobile <span class="category__count">2</span></button>
+        <button class="category__btn" data-filter="bootstrap">Bootstrap <span class="category__count">1</span></button>
       </div>
       <div class="work__projects">
         <a href="" class="project" target="blank" data-type="front-end">
-          <img class="project__img" src="" alt="">
+          <img class="project__img" src="imags/projects/projects_1e.gif" alt="">
           <div class="project__description">
-            <h3>project1</h3>
-            <span>project1</span>
+            <h3>Nav</h3>
+            <span>Nav_Bar</span>
           </div>
         </a>
         <a href="" class="project" target="blank" data-type="front-end">
-          <img class="project__img" src="" alt="">
+          <img class="project__img" src="imags/projects/projects_2e.gif" alt="">
           <div class="project__description">
-            <h3>project2</h3>
-            <span>project2</span>
+            <h3>Shopping</h3>
+            <span>Shopping_Template</span>
           </div>
         </a>
         <a href="" class="project" target="blank" data-type="front-end">
-          <img class="project__img" src="" alt="">
+          <img class="project__img" src="imags/projects/projects_3e.gif" alt="">
           <div class="project__description">
-            <h3>project3</h3>
-            <span>project3</span>
+            <h3>Youtube</h3>
+            <span>Youtube</span>
           </div>
         </a>
         <a href="" class="project" target="blank" data-type="front-end">
-          <img class="project__img" src="" alt="">
+          <img class="project__img" src="imags/projects/projects_4e.gif" alt="">
           <div class="project__description">
             <h3>project4</h3>
             <span>project4</span>
           </div>
         </a>
         <a href="" class="project" target="blank" data-type="react">
-          <img class="project__img" src="" alt="">
+          <img class="project__img" src="imags/projects/projects_6.gif" alt="">
           <div class="project__description">
-            <h3>project5</h3>
-            <span>project5</span>
+            <h3>Shop</h3>
+            <span>Shop</span>
           </div>
         </a>
         <a href="" class="project" target="blank" data-type="react">
-          <img class="project__img" src="" alt="">
+          <img class="project__img" src="imags/projects/projects_7.gif" alt="">
           <div class="project__description">
-            <h3>project6</h3>
-            <span>project6</span>
+            <h3>Todo_List</h3>
+            <span>Todo_List</span>
           </div>
         </a>
-        <a href="" class="project" target="blank" data-type="mobile">
-          <img class="project__img" src="" alt="">
+        <a href="" class="project" target="blank" data-type="bootstrap">
+          <img class="project__img" src="imags/projects/projects_5.gif" alt="">
           <div class="project__description">
-            <h3>project7</h3>
-            <span>project7</span>
-          </div>
-        </a>
-        <a href="" class="project" target="blank" data-type="mobile">
-          <img class="project__img" src="" alt="">
-          <div class="project__description">
-            <h3>project8</h3>
-            <span>project8</span>
+            <h3>Bootstrap</h3>
+            <span>Bootstrap</span>
           </div>
         </a>
       </div>
@@ -238,4 +235,5 @@
     <i class="fa-solid fa-angle-up"></i>
   </button>
 </body>
+
 </html>

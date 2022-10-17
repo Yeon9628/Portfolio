@@ -1,6 +1,6 @@
 'use strict';
 
-// Make navbar transparent when it is on the top
+// navbar가 상단에 있을 때 투명하게 만들기
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
@@ -11,7 +11,7 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// Handle scrolling when tapping on the navbar menu
+// 탐색 모음 메뉴를 탭할 때 스크롤 처리
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
@@ -24,26 +24,26 @@ navbarMenu.addEventListener('click', (event) => {
   selectNavItem(target);
 });
 
-// Navbar toggle button for small screen
+// 작은 화면용 Navbar 토글 버튼
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 })
 
-// Handle click on "contact me" button on home
+// "contact me" 버튼을 누르면 contact으로 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
 
-// Make home slowly fade to transparent as the window scrolls down
+// 창이 아래로 스크롤 될 때 Home_container가 서서히 투명하게 페이드
 const home = document.querySelector('.home__container');
 const homeHight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHight;
 });
 
-// Show "arrow up" button when scrolling down
+// 아래로 스크롤할 때 "위쪽 화살표" 버튼 표시
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
   if (window.scrollY > homeHight / 2) {
@@ -53,12 +53,12 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// Handle click on the "arrow up" button
+// "위쪽 화살표" 버튼 클릭시 맨위로 이동
 arrowUp.addEventListener('click', () => {
   scrollIntoView("#home");
 });
 
-// Projects
+// 프로젝트
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
@@ -68,18 +68,16 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
 
-  // Remove selection from the previous item and select the new one
+  // 이전에 선택된 항목을 제거하고 새 항목을 선택
   const active = document.querySelector('.category__btn.selected');
   active.classList.remove('selected');
   const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
   target.classList.add('selected');
 
-  
-
+  // 버튼별로 프로젝트 필터링
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
     projects.forEach((project) => {
-      console.log(project.dataset.type);
       if (filter === '*' || filter === project.dataset.type) {
         project.classList.remove('invisible');
       } else {
@@ -91,6 +89,14 @@ workBtnContainer.addEventListener('click', (e) => {
 });
 
 
+// 나중에 또 쓰일 수 있기 때문에 함수로 하나 만들어놓고 호출만 할 수 있게.
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth'});
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
+// 메뉴 아이템 활성화 시키기
 // 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다.
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
@@ -106,8 +112,6 @@ const sectionIds = [
 // 해당하는 모든 섹션 요소와 각각 메뉴 아이템 가져옴
 const sections = sectionIds.map(id => document.querySelector(id));
 const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
-console.log(sections);
-console.log(navItems);
 
 // 선택된 메뉴 인덱스와 변수를 저장
 let selectedNavIndex = 0;
@@ -117,13 +121,6 @@ function selectNavItem(selected) {
     selectedNavItem.classList.remove('active'); // 이전 선택 지워주고
     selectedNavItem = selected; // 다시 새롭게 할당하고 나서
     selectedNavItem.classList.add('active'); // 액티브를 지정해 준다.
-}
-
-// 나중에 또 쓰일 수 있기 때문에 함수로 하나 만들어놓고 호출만 할 수 있게.
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({ behavior: 'smooth'});
-    selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
 const observerOptions = {
